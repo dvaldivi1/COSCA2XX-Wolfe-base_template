@@ -18,7 +18,7 @@
           "-g3",
           "-Wall",
           "-fmessage-length=0",
-          "-march=native",
+//          "-march=native",
           "-v"
         ],
       },
