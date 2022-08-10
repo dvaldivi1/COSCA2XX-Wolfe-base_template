@@ -37,7 +37,7 @@ Installation instructions for specific platforms are found in the subsequent sec
 ---
 
 ### <u>Windows Installation Specifics</u>
-#### Install MinGW ( http://www.mingw.org )
+#### Install MinGW ( https://github.com/cosc-course-starter-codes/COSC_Tools/raw/main/mingw-get-setup.exe )
 
 1. Install the default installer (`mingw-get-setup.exe`) with the default options (in the default location--`C:\MinGW\`).
 1. The default installer will do a few things and then take you to the installation manager.
