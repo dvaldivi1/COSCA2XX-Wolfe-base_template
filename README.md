@@ -37,27 +37,30 @@ Installation instructions for specific platforms are found in the subsequent sec
 ---
 
 ### <u>Windows Installation Specifics</u>
-#### Install MinGW ( https://github.com/cosc-course-starter-codes/COSC_Tools/raw/main/mingw-get-setup.exe )
+#### Install MinGW ( [https://github.com/cosc-course-starter-codes/COSC_Tools/raw/main/mingw-get-setup.exe](https://github.com/msys2/msys2-installer/releases/download/2023-05-26/msys2-x86_64-20230526.exe) )
 
-1. Install the default installer (`mingw-get-setup.exe`) with the default options (in the default location--`C:\MinGW\`).
-1. The default installer will do a few things and then take you to the installation manager.
-1. From here, under `Basic Setup`, select `mingw32-gcc-g++` and `mingw32-base`.
-1. Click the menu `Installation`, then `Apply Changes` and apply the pending actions.
-1. Installer will take a while to download and install necessary components. Make sure to reboot when done.
+1. You can find an illustrated version of these instructions at: ( [https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain] )
+2.  Download and run the latest version of the installer (`msys2-x86_64-\[releasedate\].exe`) with the default options (in the default location--`C:\msys64\`).
+3.	The installer will do a few things and then ask to run MSYS2 when it is done. Make sure it is selected and run MSYS2. (You can also now find “MSYS2 MSYS” in the start menu).
+4.	This brings you to a command prompt. From here just type (or copy/paste!) the line below. Then hit enter a few times to install the mingw packages.
+```{bash}
+pacman -S --needed base-devel mingw-w64-x86_64-gcc
+```
+5.	When it is done, you will be brought back to the command prompt. Exit this by typing `exit` or just closing the window.
 
 #### Set your Path
 1. Click the Windozzze start button and type `advanced system settings` to bring up the system properties window.
 1. Click on `Environment Variables` button.
 1. In the `System variables` box at the bottom, select `Path` and press the `Edit` button (at the bottom!).
-1. Click the `New` button and type `C:\MinGW\bin`.
+1. Click the `New` button and type `C:\msys64\mingw64\bin`.
 1. Close all windows and make sure to reboot when done.
 
 #### Optional: Install OpenGL and GLUT ( http://www.transmissionzero.co.uk/software/freeglut-devel/ )
 1. Grab the latest version of FreeGLUT for MinGW from the link above and extract the files to your computer. Make sure to get the version for MinGW!
-1. Go to the subdirectories of that archive and find three folders: `bin`, `include`, and `lib`. Each of these contains files that need to be copied to the correct location for your program to compile and run. Just use the 32-bit versions (ignore any x64 files or subfolders).
-1. Copy the file `freeglut.dll` from bin to the `MinGW/bin` directory (by default, this should be something like `C:\MinGW\bin`).
-1. Copy the four files in the folder `GL` under include to the `MinGW/include/GL` directory (by default, this should be `C:\MinGW\include\GL`).
-1. Copy the two `a` (`libfreeglut.a` and `libfreeglut_static.a`) files from lib to the `MinGW/lib` directory (by default, this should be `C:\MinGW\lib`).
+1. Go to the subdirectories of that archive and find three folders: `bin`, `include`, and `lib`. Each of these contains files that need to be copied to the correct location for your program to compile and run. Just use the 64-bit versions (ignore any files not in the x64 subfolders).
+1. Copy the x64 file `freeglut.dll` from bin to the `mingw64\bin` directory (by default, this should be something like `C:\msys64\mingw64\bin`).
+1. Copy the four files in the folder `GL` under include to the `mingw64/include/GL` directory (by default, this should be `C:\msys64\mingw64\include\GL`).
+1. Copy the two x64 `a` (`libfreeglut.a` and `libfreeglut_static.a`) files from lib to the `mingw64/lib` directory (by default, this should be `C:\msys64\mingw64\lib`).
 
 ---
 
