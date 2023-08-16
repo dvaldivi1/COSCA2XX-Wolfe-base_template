@@ -37,16 +37,16 @@ Installation instructions for specific platforms are found in the subsequent sec
 ---
 
 ### <u>Windows Installation Specifics</u>
-#### Install MinGW ( [https://github.com/cosc-course-starter-codes/COSC_Tools/raw/main/mingw-get-setup.exe](https://github.com/msys2/msys2-installer/releases/download/2023-05-26/msys2-x86_64-20230526.exe) )
+#### Install MinGW ( https://github.com/cosc-course-starter-codes/COSC_Tools/raw/main/msys2-x86_64-current.exe )
 
-1. You can find an illustrated version of these instructions at: ( [https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain] )
-2.  Download and run the latest version of the installer (`msys2-x86_64-\[releasedate\].exe`) with the default options (in the default location--`C:\msys64\`).
-3.	The installer will do a few things and then ask to run MSYS2 when it is done. Make sure it is selected and run MSYS2. (You can also now find “MSYS2 MSYS” in the start menu).
-4.	This brings you to a command prompt. From here just type (or copy/paste!) the line below. Then hit enter a few times to install the mingw packages.
+You can find a longer, illustrated version of these instructions at: ( https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain )
+1.  Download and run the latest version of the installer (`msys2-x86_64-\[releasedate\].exe`) with the default options (in the default location--`C:\msys64\`).
+2.	The installer will do a few things and then ask to run MSYS2 when it is done. Make sure it is selected and run MSYS2. (You can also now find “MSYS2 MSYS” in the start menu).
+3.	This brings you to a command prompt. From here just type (or copy/paste!) the line below. This runs the package manager (not what you were thinking?) to download the current MinGWW version. Then hit enter a few times to install the mingw packages.
 ```{bash}
 pacman -S --needed base-devel mingw-w64-x86_64-gcc
 ```
-5.	When it is done, you will be brought back to the command prompt. Exit this by typing `exit` or just closing the window.
+4.	When it is done, you will be brought back to the command prompt. Exit this by typing `exit` or just closing the window.
 
 #### Set your Path
 1. Click the Windozzze start button and type `advanced system settings` to bring up the system properties window.
